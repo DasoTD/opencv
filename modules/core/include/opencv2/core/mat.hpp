@@ -1025,8 +1025,8 @@ public:
     Mat(const Mat& m, const std::vector<Range>& ranges);
 
     /** @overload
-    @param vec STL vector whose elements form the matrix. The matrix has a single column and the number
-    of rows equal to the number of vector elements. Type of the matrix matches the type of vector
+    @param vec STL vector whose elements form the matrix. The matrix has a single row and the number
+    of columns equal to the number of vector elements. Type of the matrix matches the type of vector
     elements. The constructor can handle arbitrary types, for which there is a properly declared
     DataType . This means that the vector elements must be primitive numbers or uni-type numerical
     tuples of numbers. Mixed-type structures are not supported. The corresponding constructor is
@@ -2293,7 +2293,7 @@ public:
     Mat_(const Mat_& m, const std::vector<Range>& ranges);
     //! from a matrix expression
     explicit Mat_(const MatExpr& e);
-    //! makes a matrix out of Vec, std::vector, Point_ or Point3_. The matrix will have a single column
+    //! makes a matrix out of Vec, std::vector, Point_ or Point3_. The matrix will have a single row
     explicit Mat_(const std::vector<_Tp>& vec, bool copyData=false);
     template<int n> explicit Mat_(const Vec<typename DataType<_Tp>::channel_type, n>& vec, bool copyData=true);
     template<int m, int n> explicit Mat_(const Matx<typename DataType<_Tp>::channel_type, m, n>& mtx, bool copyData=true);
